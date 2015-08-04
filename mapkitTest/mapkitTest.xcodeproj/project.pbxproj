@@ -14,6 +14,7 @@
 		E7B784271B70A3CE002E1D8B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B784201B70A3CE002E1D8B /* ViewController.m */; };
 		E7B784281B70A3CE002E1D8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B784241B70A3CE002E1D8B /* AppDelegate.m */; };
 		E7B784291B70A3CE002E1D8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7B784251B70A3CE002E1D8B /* main.m */; };
+		E7B7842B1B70A4C1002E1D8B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B7842A1B70A4C1002E1D8B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		E7B784231B70A3CE002E1D8B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7B784241B70A3CE002E1D8B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E7B784251B70A3CE002E1D8B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E7B7842A1B70A4C1002E1D8B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B7842B1B70A4C1002E1D8B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		E798D7971B709EB500AB9F95 = {
 			isa = PBXGroup;
 			children = (
+				E7B7842A1B70A4C1002E1D8B /* MapKit.framework */,
 				E798D7A21B709EB500AB9F95 /* mapkitTest */,
 				E798D7BC1B709EB500AB9F95 /* mapkitTestTests */,
 				E798D7A11B709EB500AB9F95 /* Products */,
@@ -118,10 +122,10 @@
 		E7B7841D1B70A3CE002E1D8B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E7B7841E1B70A3CE002E1D8B /* Controller */,
 				E7B784211B70A3CE002E1D8B /* Model */,
-				E7B784221B70A3CE002E1D8B /* Other */,
 				E7B784261B70A3CE002E1D8B /* View */,
+				E7B7841E1B70A3CE002E1D8B /* Controller */,
+				E7B784221B70A3CE002E1D8B /* Other */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
