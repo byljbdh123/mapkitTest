@@ -7,7 +7,7 @@
 //
 
 #import "ALAnnotationView.h"
-
+#import "ALAnnotation.h"
 @implementation ALAnnotationView
 
 /*
@@ -17,5 +17,9 @@
     // Drawing code
 }
 */
-
+- (void)setAnnotation:(ALAnnotation *)annotation{
+    [super setAnnotation:annotation];
+    UIImage *image = [UIImage imageNamed:annotation.imageName];
+    self.image = image;
+}
 @end

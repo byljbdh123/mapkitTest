@@ -13,6 +13,7 @@
 // Title and subtitle for use by selection UI.
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *subtitle;
+@property (nonatomic,copy) NSString *imageName;
 
 // Called as a result of dragging an annotation view.
 - (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;

@@ -43,16 +43,24 @@
 - (IBAction)addAnnotation {
     ALAnnotation *annotaion = [[ALAnnotation alloc]init];
     annotaion.title = @"here";
+    annotaion.imageName = @"category_1";
     annotaion.coordinate = CLLocationCoordinate2DMake(23, 112);
     [self.mapView addAnnotation:annotaion];
+    
+    ALAnnotation *annotaion1 = [[ALAnnotation alloc]init];
+    annotaion1.title = @"here";
+    annotaion1.imageName = @"category_2";
+    annotaion1.coordinate = CLLocationCoordinate2DMake(24, 112);
+    [self.mapView addAnnotation:annotaion1];
 }
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
     NSLog(@"%s",__func__);
+    if(![annotation isKindOfClass:[ALAnnotation class]])return nil;
     static NSString *identifier = @"map";
     ALAnnotationView *annotationView = (ALAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
     if(!annotationView){
         annotationView = [[ALAnnotationView alloc]init];
     }
-    return nil;
+    return annotationView;
 }
 @end
