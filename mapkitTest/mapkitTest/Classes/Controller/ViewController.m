@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "ALAnnotation.h"
+#import "ALAnnotationView.h"
 #import <MapKit/MapKit.h>
-@interface ViewController ()
+@interface ViewController ()<MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic,strong) CLLocationManager *locationManager;
 @end
@@ -31,6 +33,7 @@
     }
     //设置用户追踪模式
     self.mapView.userTrackingMode = MKUserTrackingModeFollow;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,7 +41,18 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)addAnnotation {
-    
+    ALAnnotation *annotaion = [[ALAnnotation alloc]init];
+    annotaion.title = @"here";
+    annotaion.coordinate = CLLocationCoordinate2DMake(23, 112);
+    [self.mapView addAnnotation:annotaion];
 }
-
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
+    NSLog(@"%s",__func__);
+    static NSString *identifier = @"map";
+    ALAnnotationView *annotationView = (ALAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+    if(!annotationView){
+        annotationView = [[ALAnnotationView alloc]init];
+    }
+    return nil;
+}
 @end
